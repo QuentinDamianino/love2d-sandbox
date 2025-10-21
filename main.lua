@@ -20,7 +20,7 @@ end
 
 function love.keypressed(key)
   if key == 'space' then
-    local bomb = Player.CreateBomb(Player.x, Player.y)
+    local bomb = Player:CreateBomb()
     table.insert(ListOfBombs, bomb)
   end
 end
