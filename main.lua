@@ -8,13 +8,13 @@ function love.load()
 end
 
 function love.update(dt)
-  Player.update(Player, dt)
+  Player:update(dt)
 end
 
 function love.draw()
-  Player.draw(Player)
+  Player:draw()
   for index, value in ipairs(ListOfBombs) do
-    Bomb.draw(value)
+    value:draw()
   end
 end
 
