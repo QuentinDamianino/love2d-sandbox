@@ -3,7 +3,6 @@ local player
 function love.load()
   Object = require 'dependencies.classic'
   local Player = require 'src.Player'
-  local Bomb = require 'src.Bomb'
 
   player = Player()
 
