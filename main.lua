@@ -1,18 +1,21 @@
+local player
+
 function love.load()
   Object = require 'dependencies.classic'
-  require 'src.Player'
-  require 'src.Bomb'
-  Player = Player()
+  local Player = require 'src.Player'
+  local Bomb = require 'src.Bomb'
+
+  player = Player()
 
   ListOfBombs = {}
 end
 
 function love.update(dt)
-  Player:update(dt)
+  player:update(dt)
 end
 
 function love.draw()
-  Player:draw()
+  player:draw()
   for index, value in ipairs(ListOfBombs) do
     value:draw()
   end
@@ -20,7 +23,7 @@ end
 
 function love.keypressed(key)
   if key == 'space' then
-    local bomb = Player:CreateBomb()
+    local bomb = player:CreateBomb()
     table.insert(ListOfBombs, bomb)
   end
 end

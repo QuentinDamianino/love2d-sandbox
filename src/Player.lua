@@ -1,4 +1,6 @@
-Player = Object:extend()
+local Bomb = require 'src.Bomb'
+
+local Player = Object:extend()
 
 function Player:new()
   self.x = 100
@@ -41,3 +43,5 @@ end
 function Player:CreateBomb()
   return Bomb(self.x, self.y)
 end
+
+return Player

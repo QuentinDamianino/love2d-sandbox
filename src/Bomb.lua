@@ -1,4 +1,4 @@
-Bomb = Object:extend()
+local Bomb = Object:extend()
 
 function Bomb:new(x, y)
   self.x = x
@@ -10,3 +10,5 @@ end
 function Bomb:draw()
   love.graphics.ellipse('fill', self.x, self.y, self.width, self.height)
 end
+
+return Bomb
